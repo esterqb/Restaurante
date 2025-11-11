@@ -1,0 +1,11 @@
+============= TICKET MESA 7=============
+--------------------------------------------------------------------
+Patatas bravas       x1   3,50€/u  =  3,50€
+Lagartito iberico    x1   8,50€/u  =  8,50€
+Flamenquin cordobes  x1   9,50€/u  =  9,50€
+Calamares a la plancha x1   7,00€/u  =  7,00€
+Cola Zero            x2   1,80€/u  =  3,60€
+Cerveza              x1   1,80€/u  =  1,80€
+Tarta abuela         x1   5,50€/u  =  5,50€
+Tarta comadre        x1   6,00€/u  =  6,00€
+=========================================

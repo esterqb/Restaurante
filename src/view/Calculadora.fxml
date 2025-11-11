@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculadoraController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <Label layoutX="40.0" layoutY="26.0" text="Meson Rejano - Calculadora" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Serif Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="500.0" maxHeight="49.0" maxWidth="730.0" minHeight="49.0" minWidth="730.0" prefHeight="49.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <ImageView fx:id="homeButton" fitHeight="35.0" fitWidth="55.0" layoutX="345.0" layoutY="7.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="backButton" fitHeight="50.0" fitWidth="53.0" layoutX="517.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="80.0" prefHeight="421.0" prefWidth="730.0" style="-fx-background-color: #303030;">
+         <children>
+            <Button layoutX="326.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="0" textFill="WHITE" />
+            <Button layoutX="206.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #ded057; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="C" textFill="WHITE" />
+            <Button layoutX="442.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #e0b263; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="/" textFill="WHITE" />
+            <Button layoutX="327.0" layoutY="274.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="2" textFill="WHITE" />
+            <Button layoutX="327.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="5" textFill="WHITE" />
+            <Button layoutX="206.0" layoutY="274.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="1" textFill="WHITE" />
+            <Pane fx:id="pantalla" layoutX="206.0" layoutY="20.0" prefHeight="102.0" prefWidth="427.0" style="-fx-background-color: linear-gradient(to bottom right, #2b2b2b, #3e3e3e); -fx-background-radius: 12px; -fx-border-color: rgba(255, 255, 255, 0.2); -fx-border-width: 1.5px; -fx-border-radius: 12px; -fx-padding: 10px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);">
+               <children>
+                  <Label fx:id="label" alignment="BOTTOM_RIGHT" layoutX="183.0" layoutY="19.0" prefHeight="72.0" prefWidth="230.0" style="-fx-font-family: &quot;Consolas&quot;, &quot;Roboto Mono&quot;, monospace;" text=" " textAlignment="RIGHT" textFill="#e1e1e1">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button layoutX="442.0" layoutY="274.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="3" textFill="WHITE" />
+            <Button layoutX="207.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="4" textFill="WHITE" />
+            <Button layoutX="442.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="6" textFill="WHITE" />
+            <Button layoutX="555.0" layoutY="274.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #e0b263; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="+" textFill="WHITE" />
+            <Button layoutX="554.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #e0b263; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="-" textFill="WHITE" />
+            <Button layoutX="555.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #ffac1c; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="=" textFill="WHITE" />
+            <Button layoutX="324.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="8" textFill="WHITE" />
+            <Button layoutX="206.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="7" textFill="WHITE" />
+            <Button layoutX="442.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #212121; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="9" textFill="WHITE" />
+            <Button layoutX="554.0" layoutY="154.0" mnemonicParsing="false" onMouseClicked="#click" prefHeight="43.0" prefWidth="79.0" style="-fx-background-color: #e0b263; -fx-background-radius: 50px; -fx-border-radius: 50px; -fx-border-color: #d9d9d9; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 12, 0.3, 0, 4);" text="x" textFill="WHITE" />
+            <ImageView fitHeight="134.0" fitWidth="136.0" layoutX="33.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/66649.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

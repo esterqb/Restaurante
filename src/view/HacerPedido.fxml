@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HacerPedidoController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <Label layoutX="40.0" layoutY="26.0" text="Meson Rejano - Hacer pedido" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Serif Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="500.0" maxHeight="49.0" maxWidth="730.0" minHeight="49.0" minWidth="730.0" prefHeight="49.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <ImageView fx:id="homeButton" fitHeight="35.0" fitWidth="55.0" layoutX="345.0" layoutY="7.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="backButton" fitHeight="50.0" fitWidth="53.0" layoutX="517.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="saveButton" fitHeight="47.0" fitWidth="53.0" layoutX="172.0" layoutY="1.0" onMouseClicked="#save" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/save.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="80.0" prefHeight="419.0" prefWidth="730.0" style="-fx-background-color: #fcfcfc;">
+         <children>
+            <Pane fx:id="carnes" layoutX="269.0" layoutY="35.0" onMouseClicked="#goToCarnes" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="carnesPic" fitHeight="112.0" fitWidth="168.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goToCarnesPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/flamenquin.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="entrantes" layoutX="35.0" layoutY="35.0" onMouseClicked="#goToEntrantes" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="entrantesPic" fitHeight="112.0" fitWidth="171.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goToEntrantesPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/entrantes.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="101.0" layoutY="160.0" text="Entrantes">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="344.0" layoutY="160.0" text="Carnes">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Pane fx:id="bebidas" layoutX="269.0" layoutY="210.0" onMouseClicked="#goToBebidas" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="bebidasPic" fitHeight="112.0" fitWidth="168.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goToBebidasPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/stockfresh.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="341.0" layoutY="335.0" text="Bebidas">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Pane fx:id="ensaladas" layoutX="35.0" layoutY="210.0" onMouseClicked="#goToEnsaladas" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="ensaladasPic" fitHeight="112.0" fitWidth="168.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goToEnsaladasPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ensalada.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="100.0" layoutY="335.0" text="Ensaladas">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pescados" layoutX="502.0" layoutY="35.0" onMouseClicked="#goToPescados" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="pescadosPic" fitHeight="112.0" fitWidth="168.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goToPescadosPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/calamares-fritos-1024x683.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="570.0" layoutY="160.0" text="Pescados">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Pane fx:id="postres" layoutX="502.0" layoutY="210.0" onMouseClicked="#goToPostres" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="postresPic" fitHeight="112.0" fitWidth="187.0" layoutX="3.0" layoutY="6.0" onMouseClicked="#goToPostresPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/tarta+.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="576.0" layoutY="335.0" text="Postres">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

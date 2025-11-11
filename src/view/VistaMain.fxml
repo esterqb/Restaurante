@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VistaMainController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <Label layoutX="40.0" layoutY="26.0" text="Meson Rejano" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Serif Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="500.0" maxHeight="49.0" maxWidth="730.0" minHeight="49.0" minWidth="730.0" prefHeight="49.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <ImageView fx:id="homeButton" fitHeight="35.0" fitWidth="55.0" layoutX="345.0" layoutY="7.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="backButton" fitHeight="50.0" fitWidth="53.0" layoutX="517.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="80.0" prefHeight="419.0" prefWidth="730.0" style="-fx-background-color: #fcfcfc;">
+         <children>
+            <Pane fx:id="almacen" layoutX="269.0" layoutY="35.0" onMouseClicked="#goToAlmacen" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="almacenPic" fitHeight="104.0" fitWidth="193.0" layoutX="2.0" layoutY="7.0" onMouseClicked="#goToAlmacenPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/stock.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="hacerPedido" layoutX="35.0" layoutY="35.0" onMouseClicked="#hacerPedido" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="pedidoPic" fitHeight="112.0" fitWidth="171.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#hacerPedidoPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/comanda.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="90.0" layoutY="160.0" text="Hacer pedido">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="307.0" layoutY="160.0" text="Consultar almacen">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Pane fx:id="calculadora" layoutX="269.0" layoutY="210.0" onMouseClicked="#goToCalculadora" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="calculadoraPic" fitHeight="112.0" fitWidth="134.0" layoutX="41.0" layoutY="3.0" onMouseClicked="#goToCalculadoraPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/475497.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="328.0" layoutY="335.0" text="Calculadora">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Pane layoutX="35.0" layoutY="210.0" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="149.0" layoutX="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/comandas.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="95.0" layoutY="335.0" text="Ver pedidos">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Pane fx:id="stockBebida" layoutX="502.0" layoutY="35.0" onMouseClicked="#goToStockBebida" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fx:id="stockBebidaPic" fitHeight="112.0" fitWidth="168.0" layoutX="13.0" layoutY="3.0" onMouseClicked="#goToStockBebidaPic" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/stockfresh.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="527.0" layoutY="160.0" text="Consultar stock bebida">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <Pane layoutX="502.0" layoutY="210.0" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+               <children>
+                  <ImageView fitHeight="112.0" fitWidth="182.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/calculator-385506_1280.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="562.0" layoutY="335.0" text="Balance dia">
+               <font>
+                  <Font name="Noto Serif Regular" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AlmacenController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <Label layoutX="40.0" layoutY="26.0" text="Meson Rejano - Almacen" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Serif Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="500.0" maxHeight="49.0" maxWidth="730.0" minHeight="49.0" minWidth="730.0" prefHeight="49.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <ImageView fx:id="homeButton" fitHeight="35.0" fitWidth="55.0" layoutX="345.0" layoutY="7.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="backButton" fitHeight="50.0" fitWidth="53.0" layoutX="517.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="saveButton" fitHeight="47.0" fitWidth="53.0" layoutX="172.0" layoutY="1.0" onMouseClicked="#save" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/save.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane layoutY="80.0" prefHeight="420.0" prefWidth="730.0">
+         <content>
+            <VBox prefHeight="419.0" prefWidth="731.0">
+               <children>
+                  <GridPane prefHeight="421.0" prefWidth="691.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Pane prefHeight="88.0" prefWidth="366.0">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Tomates 3kg">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addTomate" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteTomate" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Ajos">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addAjo" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteAjo" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador1" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Pan">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addPan" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deletePan" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador2" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Patatas 5kg">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addPatatas" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deletePatatas" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador3" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Mayonesa">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addMayonesa" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteMayonesa" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador6" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Ketchup">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addKetchup" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteKetchup" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador7" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Zanahorias 1kg">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addZanahorias" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteZanahorias" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador4" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Huevos 24ud">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addHuevos" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteHuevos" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador5" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.rowIndex="4">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Prep salpicon surimi">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addSurimi" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteSurimi" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador8" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Anchoas 500g">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addAnch" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteAnch" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador9" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.rowIndex="5">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Salsa brava">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addBrava" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteBrava" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador10" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Pan rallado">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addRallado" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteRallado" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador11" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.rowIndex="6">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Jamon york 2kg">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addYork" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteYork" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador12" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Lomo 5kg">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addLomo" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteLomo" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador13" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.rowIndex="7">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Pimiento verde 1kg">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addPimiento" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deletePimiento" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador14" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="88.0" prefWidth="366.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <children>
+                              <Label layoutX="26.0" layoutY="14.0" text="Lagartito 8kg">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addLagarto" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteLagarto" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador15" layoutX="258.0" layoutY="14.0" text="0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

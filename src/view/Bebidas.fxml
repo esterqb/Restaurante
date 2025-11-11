@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BebidasController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <Label layoutX="40.0" layoutY="26.0" text="Meson Rejano - Bebidas" textFill="WHITE">
+               <font>
+                  <Font name="Liberation Serif Bold Italic" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="500.0" maxHeight="49.0" maxWidth="730.0" minHeight="49.0" minWidth="730.0" prefHeight="49.0" prefWidth="730.0" style="-fx-background-color: #212121;">
+         <children>
+            <ImageView fx:id="homeButton" fitHeight="35.0" fitWidth="55.0" layoutX="345.0" layoutY="7.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="backButton" fitHeight="50.0" fitWidth="53.0" layoutX="517.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="saveButton" fitHeight="47.0" fitWidth="53.0" layoutX="172.0" layoutY="1.0" onMouseClicked="#save" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/save.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ScrollPane layoutY="80.0" prefHeight="420.0" prefWidth="730.0">
+         <content>
+            <VBox prefHeight="419.0" prefWidth="731.0">
+               <children>
+                  <GridPane prefHeight="421.0" prefWidth="691.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="102.0" layoutY="44.0" text="Coca-Cola">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addCoke" layoutX="183.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteCoke" layoutX="275.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador" layoutX="253.0" layoutY="48.0" text="0" />
+                              <Pane fx:id="entrantes" layoutX="14.0" layoutY="9.0" onMouseClicked="#goToEntrantes" prefHeight="87.0" prefWidth="81.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+                                 <children>
+                                    <ImageView fitHeight="87.0" fitWidth="56.0" layoutX="13.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/images%20(1).jpeg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="95.0" layoutY="44.0" text="Fanta naranja">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addNaranja" layoutX="183.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteNaranja" layoutX="275.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador2" layoutX="252.0" layoutY="44.0" text="0" />
+                              <Pane fx:id="entrantes11" layoutX="14.0" layoutY="9.0" onMouseClicked="#goToEntrantes" prefHeight="87.0" prefWidth="81.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+                                 <children>
+                                    <ImageView fitHeight="92.0" fitWidth="83.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/naranja_4.fiorentina-casa_web_fiorentina.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label layoutX="102.0" layoutY="44.0" text="Cola Zero">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addCokeZero" layoutX="183.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteCokeZero" layoutX="275.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador1" layoutX="252.0" layoutY="44.0" text="0" />
+                              <Pane fx:id="entrantes1" layoutX="14.0" layoutY="9.0" onMouseClicked="#goToEntrantes" prefHeight="87.0" prefWidth="81.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+                                 <children>
+                                    <ImageView fitHeight="94.0" fitWidth="65.0" layoutX="8.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/images.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="102.0" layoutY="44.0" text="Fanta limon">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addLimon" layoutX="183.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteLimon" layoutX="275.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador3" layoutX="252.0" layoutY="44.0" text="0" />
+                              <Pane fx:id="entrantes12" layoutX="14.0" layoutY="9.0" onMouseClicked="#goToEntrantes" prefHeight="87.0" prefWidth="81.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+                                 <children>
+                                    <ImageView fitHeight="91.0" fitWidth="85.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-radius: 10px;">
+                                       <image>
+                                          <Image url="@../images/limon_4.fiorentina-casa_web_fiorentina.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="102.0" layoutY="44.0" text="Agua 1,5l">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addAgua" layoutX="183.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteAgua" layoutX="275.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador5" layoutX="252.0" layoutY="44.0" text="0" />
+                              <Pane fx:id="entrantes112" layoutX="14.0" layoutY="9.0" onMouseClicked="#goToEntrantes" prefHeight="87.0" prefWidth="81.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+                                 <children>
+                                    <ImageView fitHeight="92.0" fitWidth="83.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/agua-aquabona-15l.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="102.0" layoutY="44.0" text="Nestea">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addNestea" layoutX="183.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteNestea" layoutX="275.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador4" layoutX="252.0" layoutY="44.0" text="0" />
+                              <Pane fx:id="entrantes111" layoutX="14.0" layoutY="9.0" onMouseClicked="#goToEntrantes" prefHeight="87.0" prefWidth="81.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+                                 <children>
+                                    <ImageView fitHeight="92.0" fitWidth="83.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/bebidas-nestea-limon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label layoutX="102.0" layoutY="44.0" text="Cerveza">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addCerveza" layoutX="183.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteCerveza" layoutX="275.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador6" layoutX="252.0" layoutY="44.0" text="0" />
+                              <Pane fx:id="entrantes1111" layoutX="14.0" layoutY="9.0" onMouseClicked="#goToEntrantes" prefHeight="87.0" prefWidth="81.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+                                 <children>
+                                    <ImageView fitHeight="80.0" fitWidth="59.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/images%20(2).jpeg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label layoutX="102.0" layoutY="44.0" text="Vino">
+                                 <font>
+                                    <Font name="Noto Serif Regular" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addVino" layoutX="183.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#add" text="Añadir" />
+                              <Button fx:id="deleteVino" layoutX="275.0" layoutY="44.0" mnemonicParsing="false" onMouseClicked="#delete" text="Eliminar" />
+                              <Label fx:id="contador7" layoutX="252.0" layoutY="44.0" text="0" />
+                              <Pane fx:id="entrantes1112" layoutX="14.0" layoutY="9.0" onMouseClicked="#goToEntrantes" prefHeight="87.0" prefWidth="81.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+                                 <children>
+                                    <ImageView fitHeight="88.0" fitWidth="65.0" layoutX="8.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/vino-tinto-3-nits-de-urpina-caja-6-botellas.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
