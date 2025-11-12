@@ -46,6 +46,6 @@ private String nombre;
     @Override
     public String toString() {
         if (cantidad == 0) return "";
-        return String.format("%-20s x%-2d %s", nombre, cantidad);
+        return String.format("%-20s x%-2d ", nombre, cantidad);
     }
 }

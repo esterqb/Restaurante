@@ -63,10 +63,49 @@ public class VistaMainController implements Initializable {
 
     @FXML
     private void goHome(MouseEvent event) {
+        Stage cambiarVista = (Stage) homeButton.getScene().getWindow();
+
+
+        try {
+            Parent nroot = FXMLLoader.load(getClass().getResource("/view/VistaMain.fxml"));
+            Scene scene = new Scene(nroot);
+            cambiarVista.setTitle("Vista 1");
+
+
+            // Seteo la scene y la muestro
+            cambiarVista.setScene(scene);
+
+            cambiarVista.show();
+
+
+            
+        } catch (IOException ex) {
+            System.getLogger(VistaMainController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
     }
 
     @FXML
     private void goBack(MouseEvent event) {
+        Stage cambiarVista = (Stage) backButton.getScene().getWindow();
+
+
+        try {
+            Parent nroot = FXMLLoader.load(getClass().getResource("/view/VistaMain.fxml"));
+            Scene scene = new Scene(nroot);
+            cambiarVista.setTitle("Vista 1");
+
+
+            // Seteo la scene y la muestro
+            cambiarVista.setScene(scene);
+
+            cambiarVista.show();
+
+
+            
+        } catch (IOException ex) {
+            System.getLogger(VistaMainController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+        
     }
 
     @FXML

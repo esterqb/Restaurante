@@ -27,6 +27,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Plato;
+import model.Producto;
 
 /**
  * FXML Controller class
@@ -34,7 +35,7 @@ import model.Plato;
  * @author ester
  */
 public class StockBebidaController implements Initializable {
-    private List<Plato> ticket = new ArrayList<>();
+    private List<Producto> listaBebidas = new ArrayList<>();
     private Map<String, Plato> platos;
 
     @FXML
@@ -43,29 +44,53 @@ public class StockBebidaController implements Initializable {
     private ImageView backButton;
     @FXML
     private ImageView saveButton;
+    @FXML
     private Button addCoke;
+    @FXML
     private Button deleteCoke;
+    @FXML
     private Label contador;
+    @FXML
     private Button addNaranja;
+    @FXML
     private Button deleteNaranja;
+    @FXML
     private Label contador2;
+    @FXML
     private Button addCokeZero;
+    @FXML
     private Button deleteCokeZero;
+    @FXML
     private Label contador1;
+    @FXML
     private Button addLimon;
+    @FXML
     private Button deleteLimon;
+    @FXML
     private Label contador3;
+    @FXML
     private Button addAgua;
+    @FXML
     private Button deleteAgua;
+    @FXML
     private Label contador5;
+    @FXML
     private Button addNestea;
+    @FXML
     private Button deleteNestea;
+    @FXML
     private Label contador4;
+    @FXML
     private Button addCerveza;
+    @FXML
     private Button deleteCerveza;
+    @FXML
     private Label contador6;
+    @FXML
     private Button addVino;
+    @FXML
     private Button deleteVino;
+    @FXML
     private Label contador7;
 
     /**
@@ -134,30 +159,28 @@ public class StockBebidaController implements Initializable {
         for (Plato p : platos.values()) {
         if (p.getCantidad() > 0) {
             boolean existe = false;
-            for (Plato t : ticket) {
+            for (Producto t : listaBebidas) {
                 if (t.getNombre().equals(p.getNombre())) {
                     t.setCantidad(p.getCantidad());
-                    t.setComentario(p.getComentario());
                     existe = true;
                     break;
                     }
                 }
                 if (!existe) {
-                Plato nuevo = new Plato(p.getNombre(),p.getPrecio());
+                Producto nuevo = new Producto(p.getNombre());
                 nuevo.setCantidad(p.getCantidad());
-                nuevo.setComentario(p.getComentario());
-                ticket.add(nuevo);
+                listaBebidas.add(nuevo);
                 }
             }
-        }mostrarInfo("Pedido guardado", "Bebidas añadidas a la lista correctamente.");
+        }mostrarInfo("Pedido guardado", "Bebidas añadidas a la lista.");
         guardarTicketEnArchivo();
     }
     
     //Métodos de guardado: apendar al ticket existente
         private String generarTicket() {
         StringBuilder sb = new StringBuilder();
-        sb.append("======== TICKET ========\n");
-        for (Plato p : ticket) {
+        sb.append("======== PEDIDO ========\n");
+        for (Producto p : listaBebidas) {
             if (p.getCantidad() > 0) {
                 sb.append(p.toString()).append("\n");
             }
@@ -167,17 +190,18 @@ public class StockBebidaController implements Initializable {
     }
     
     private void guardarTicketEnArchivo() {
+              System.out.println("Guardando ticket en listaCompra...");
         String ticketStr = generarTicket();
 
-        File carpeta = new File("src/tickets");
+        File carpeta = new File("src/listaCompra");
         if (!carpeta.exists()) {
             carpeta.mkdirs();
         }
-
         int numero = 1;
         File archivo;
         do {
-            archivo = new File(carpeta, "ticket" + numero + ".txt");
+            archivo = new File(carpeta, "lista00" + numero + ".txt");
+                  System.out.println("Guardando ticket en listaCompra...");
             numero++;
         } while (archivo.exists());
 
@@ -189,6 +213,7 @@ public class StockBebidaController implements Initializable {
         }
     }
 
+    @FXML
     private void add(MouseEvent event) {
         Object src = event.getSource();
         if (src == null) return;
@@ -212,6 +237,7 @@ public class StockBebidaController implements Initializable {
         }
     }
 
+    @FXML
     private void delete(MouseEvent event) {
         Object src = event.getSource();
         if (src == null) return;

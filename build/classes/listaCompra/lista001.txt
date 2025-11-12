@@ -1,0 +1,4 @@
+======== PEDIDO ========
+Fanta naranja  pack 24 x1  
+Coca-Cola pack 24    x1  
+========================

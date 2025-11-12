@@ -23,11 +23,16 @@ import javafx.stage.Stage;
 
 public class VerPedidosController implements Initializable {
 
-    @FXML private ImageView homeButton;
-    @FXML private ImageView backButton;
-    @FXML private DatePicker fechaPicker;
-    @FXML private VBox ticketsVBox;
-    @FXML private Label resumenLabel;
+    @FXML
+    private ImageView homeButton;
+    @FXML
+    private ImageView backButton;
+    @FXML
+    private DatePicker fechaPicker;
+    @FXML
+    private VBox ticketsVBox;
+    @FXML
+    private Label resumenLabel;
 
     private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -50,7 +55,7 @@ public class VerPedidosController implements Initializable {
             return;
         }
 
-        ticketsVBox.getChildren().clear(); // Limpiar los tickets anteriores
+        ticketsVBox.getChildren().clear(); 
         int numeroPedidos = 0;
         double totalDinero = 0;
 
@@ -69,12 +74,11 @@ public class VerPedidosController implements Initializable {
                 }
 
                 if (fechaTicket != null && fechaTicket.equals(fechaSeleccionada)) {
-                    // Crear la etiqueta para cada ticket
                     Label ticketLabel = new Label(contenido);
-                    ticketLabel.setWrapText(true); // Permitir que el texto se ajuste en varias líneas
+                    ticketLabel.setWrapText(true); 
                     ticketLabel.setStyle("-fx-border-color: gray; -fx-background-color: #f9f9f9; -fx-padding: 10;");
-                    ticketLabel.setMaxWidth(Double.MAX_VALUE);  // Asegura que la etiqueta ocupe todo el ancho disponible
-                    ticketLabel.setMinHeight(Region.USE_PREF_SIZE); // Permite que la altura de la etiqueta se ajuste automáticamente
+                    ticketLabel.setMaxWidth(Double.MAX_VALUE);  
+                    ticketLabel.setMinHeight(Region.USE_PREF_SIZE);
 
                     // Agregar la etiqueta al VBox
                     ticketsVBox.getChildren().add(ticketLabel);
@@ -103,8 +107,6 @@ public class VerPedidosController implements Initializable {
             resumenLabel.setText("Pedidos: " + numeroPedidos + " | Total: " + String.format("%.2f€", totalDinero));
         }
     }
-
-
 
     private void mostrarAlerta(String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
