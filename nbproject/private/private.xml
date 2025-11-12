@@ -6,6 +6,10 @@
             <file>file:/home/ester/NetBeansProjects/Restaurante/src/view/VerPedidos.fxml</file>
             <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/VerPedidosController.java</file>
             <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/VistaMainController.java</file>
+            <file>file:/home/ester/NetBeansProjects/Restaurante/src/view/Almacen.fxml</file>
+            <file>file:/home/ester/NetBeansProjects/Restaurante/src/tickets/mesa1_ticket001.txt</file>
+            <file>file:/home/ester/NetBeansProjects/Restaurante/src/tickets/mesa2_ticket001.txt</file>
+            <file>file:/home/ester/NetBeansProjects/Restaurante/src/tickets/mesa3_ticket001.txt</file>
         </group>
     </open-files>
 </project-private>

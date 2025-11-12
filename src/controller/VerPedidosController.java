@@ -17,6 +17,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -34,7 +35,7 @@ public class VerPedidosController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         fechaPicker.setValue(LocalDate.now());
     }
-
+    
     @FXML
     private void verPedidos() {
         LocalDate fechaSeleccionada = fechaPicker.getValue();
@@ -49,7 +50,7 @@ public class VerPedidosController implements Initializable {
             return;
         }
 
-        ticketsVBox.getChildren().clear();
+        ticketsVBox.getChildren().clear(); // Limpiar los tickets anteriores
         int numeroPedidos = 0;
         double totalDinero = 0;
 
@@ -68,12 +69,19 @@ public class VerPedidosController implements Initializable {
                 }
 
                 if (fechaTicket != null && fechaTicket.equals(fechaSeleccionada)) {
+                    // Crear la etiqueta para cada ticket
                     Label ticketLabel = new Label(contenido);
-                    ticketLabel.setWrapText(true);
+                    ticketLabel.setWrapText(true); // Permitir que el texto se ajuste en varias líneas
                     ticketLabel.setStyle("-fx-border-color: gray; -fx-background-color: #f9f9f9; -fx-padding: 10;");
+                    ticketLabel.setMaxWidth(Double.MAX_VALUE);  // Asegura que la etiqueta ocupe todo el ancho disponible
+                    ticketLabel.setMinHeight(Region.USE_PREF_SIZE); // Permite que la altura de la etiqueta se ajuste automáticamente
+
+                    // Agregar la etiqueta al VBox
                     ticketsVBox.getChildren().add(ticketLabel);
 
                     numeroPedidos++;
+
+                    // Obtener el total de cada ticket
                     for (String linea : lineas) {
                         if (linea.startsWith("TOTAL:")) {
                             String montoStr = linea.replace("TOTAL:", "").replace("€", "").trim();
@@ -95,6 +103,8 @@ public class VerPedidosController implements Initializable {
             resumenLabel.setText("Pedidos: " + numeroPedidos + " | Total: " + String.format("%.2f€", totalDinero));
         }
     }
+
+
 
     private void mostrarAlerta(String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
