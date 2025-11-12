@@ -3,17 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/model/Plato.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/HacerPedidoController.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/BebidasController.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/CarnesController.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/EnsaladasController.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/EntrantesController.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/PescadosController.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/PostresController.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/model/TicketManager.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/StockBebidaController.java</file>
-            <file>file:/home/ester/NetBeansProjects/Restaurante/src/tickets/mesa7_ticket001.txt</file>
+            <file>file:/home/ester/NetBeansProjects/Restaurante/src/view/VerPedidos.fxml</file>
+            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/VerPedidosController.java</file>
+            <file>file:/home/ester/NetBeansProjects/Restaurante/src/controller/VistaMainController.java</file>
         </group>
     </open-files>
 </project-private>
