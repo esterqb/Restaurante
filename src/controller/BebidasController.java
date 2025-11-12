@@ -28,6 +28,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.Plato;
+import model.StockManager;
 import model.TicketManager;
 
 /**
@@ -244,17 +245,30 @@ public class BebidasController implements Initializable {
         }
     }
 
-   
-    private void actualizarContador(String nombre, Label label, int delta) {
+   /*
+   *Método para conectar el almacén de bebidas StockBebidaController.java con las bebidas que se van pidiendo.
+    *Permite controlar que no se puedan pedir bebidas si no hay stock: 
+    *Delta positivio: stock--, si no hay suficiente, no aumenta.
+    *Si delta negativo: se elimina del ticker, la bebida vuelve al stock++
+   */
+    private void actualizarContador(String nombre, Label label, int delta) { 
         Plato p = platos.get(nombre);
         if (p == null) return;
 
-        int nuevaCantidad = p.getCantidad() + delta;
-        if (nuevaCantidad < 0) nuevaCantidad = 0;
-        p.setCantidad(nuevaCantidad);
+        if (delta > 0) {
+            if (!StockManager.getInstance().restarStock(nombre, delta)) {
+                mostrarInfo("Stock insuficiente", "No hay suficiente stock de " + nombre);
+                return; 
+            }
+        } else { 
+            StockManager.getInstance().sumarStock(nombre, -delta);
+        }
 
-        label.setText(String.valueOf(nuevaCantidad));
-    }
+    int nuevaCantidad = p.getCantidad() + delta;
+    if (nuevaCantidad < 0) nuevaCantidad = 0;
+    p.setCantidad(nuevaCantidad);
+    label.setText(String.valueOf(nuevaCantidad));
+}
 
     private void guardarComentario(String nombre, TextArea area) {
         Plato p = platos.get(nombre);

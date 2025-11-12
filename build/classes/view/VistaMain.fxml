@@ -76,9 +76,9 @@
                   <Font name="Noto Serif Regular" size="13.0" />
                </font>
             </Label>
-            <Pane layoutX="35.0" layoutY="210.0" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+            <Pane fx:id="verPedidos" layoutX="35.0" layoutY="210.0" onMouseClicked="#goToVerPedidos" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
                <children>
-                  <ImageView fitHeight="112.0" fitWidth="149.0" layoutX="22.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="verPedidosPic" fitHeight="112.0" fitWidth="149.0" layoutX="22.0" layoutY="3.0" onMouseClicked="#goToVerPedidosPic" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/comandas.jpg" />
                      </image>
@@ -104,9 +104,9 @@
                   <Font name="Noto Serif Regular" size="13.0" />
                </font>
             </Label>
-            <Pane layoutX="502.0" layoutY="210.0" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
+            <Pane fx:id="balance" layoutX="502.0" layoutY="210.0" onMouseClicked="#goToBalance" prefHeight="118.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-border-radius: 10px;">
                <children>
-                  <ImageView fitHeight="112.0" fitWidth="182.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="balancePic" fitHeight="112.0" fitWidth="182.0" layoutX="6.0" layoutY="5.0" onMouseClicked="#goToBalancePic" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/calculator-385506_1280.jpg" />
                      </image>

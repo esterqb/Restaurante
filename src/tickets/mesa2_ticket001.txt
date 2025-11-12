@@ -1,0 +1,17 @@
+============== TICKET MESA 2==============
+Fecha/Hora: 12/11/2025 11:42
+--------------------------------------------------------------------
+Salmorejo cordobes   x1   3,50€/u  =  3,50€
+Patatas bravas       x1   3,50€/u  =  3,50€
+Patatas fritas       x1   3,00€/u  =  3,00€
+Flamenquin cordobes  x1   9,50€/u  =  9,50€
+Surtido de croquetas x1   5,50€/u  =  5,50€
+Ensalada cabrales    x1   5,50€/u  =  5,50€
+Cola Zero            x1   1,80€/u  =  1,80€
+Fanta naranja        x1   1,80€/u  =  1,80€
+Cerveza              x1   1,80€/u  =  1,80€
+Tarta limon          x1   4,50€/u  =  4,50€
+Coulant              x2   4,00€/u  =  8,00€
+--------------------------------------------------------------------
+TOTAL: 48,40€
+=========================================

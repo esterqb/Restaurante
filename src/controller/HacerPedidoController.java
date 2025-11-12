@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -422,7 +424,10 @@ public class HacerPedidoController implements Initializable {
         }
 
         StringBuilder sb = new StringBuilder();
+        LocalDateTime ahora = LocalDateTime.now();
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         sb.append("============== TICKET MESA "+numeroMesa+"==============\n");
+        sb.append("Fecha/Hora: ").append(ahora.format(formato)).append("\n");
         sb.append("--------------------------------------------------------------------\n");
 
         for (Plato p : pedidoCompleto) {
@@ -430,6 +435,9 @@ public class HacerPedidoController implements Initializable {
                 sb.append(p.toString()).append("\n");
             }
         }
+        double total = calcularTotal(pedidoCompleto);
+        sb.append("--------------------------------------------------------------------\n");
+        sb.append(String.format("TOTAL: %.2f€\n", total));
         sb.append("=========================================\n");
 
         File carpeta = new File("src/tickets");
@@ -458,4 +466,13 @@ public class HacerPedidoController implements Initializable {
         alerta.showAndWait();
     }
     
+    private double calcularTotal(List<Plato> pedido) {
+    double total = 0;
+    for (Plato p : pedido) {
+        if (p.getCantidad() > 0) {
+            total += p.getCantidad() * p.getPrecio();
+        }
+    }
+    return total;
+}
 }

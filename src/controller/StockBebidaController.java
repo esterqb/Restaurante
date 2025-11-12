@@ -43,53 +43,29 @@ public class StockBebidaController implements Initializable {
     private ImageView backButton;
     @FXML
     private ImageView saveButton;
-    @FXML
     private Button addCoke;
-    @FXML
     private Button deleteCoke;
-    @FXML
     private Label contador;
-    @FXML
     private Button addNaranja;
-    @FXML
     private Button deleteNaranja;
-    @FXML
     private Label contador2;
-    @FXML
     private Button addCokeZero;
-    @FXML
     private Button deleteCokeZero;
-    @FXML
     private Label contador1;
-    @FXML
     private Button addLimon;
-    @FXML
     private Button deleteLimon;
-    @FXML
     private Label contador3;
-    @FXML
     private Button addAgua;
-    @FXML
     private Button deleteAgua;
-    @FXML
     private Label contador5;
-    @FXML
     private Button addNestea;
-    @FXML
     private Button deleteNestea;
-    @FXML
     private Label contador4;
-    @FXML
     private Button addCerveza;
-    @FXML
     private Button deleteCerveza;
-    @FXML
     private Label contador6;
-    @FXML
     private Button addVino;
-    @FXML
     private Button deleteVino;
-    @FXML
     private Label contador7;
 
     /**
@@ -213,7 +189,6 @@ public class StockBebidaController implements Initializable {
         }
     }
 
-    @FXML
     private void add(MouseEvent event) {
         Object src = event.getSource();
         if (src == null) return;
@@ -237,7 +212,6 @@ public class StockBebidaController implements Initializable {
         }
     }
 
-    @FXML
     private void delete(MouseEvent event) {
         Object src = event.getSource();
         if (src == null) return;

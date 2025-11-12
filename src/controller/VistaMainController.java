@@ -44,6 +44,14 @@ public class VistaMainController implements Initializable {
     private Pane calculadora;
     @FXML
     private ImageView calculadoraPic;
+    @FXML
+    private Pane balance;
+    @FXML
+    private ImageView balancePic;
+    @FXML
+    private Pane verPedidos;
+    @FXML
+    private ImageView verPedidosPic;
 
     /**
      * Initializes the controller class.
@@ -231,6 +239,98 @@ public class VistaMainController implements Initializable {
             Parent nroot = FXMLLoader.load(getClass().getResource("/view/Calculadora.fxml"));
             Scene scene = new Scene(nroot);
             cambiarVista.setTitle("Vista 12");
+
+
+            // Seteo la scene y la muestro
+            cambiarVista.setScene(scene);
+
+            cambiarVista.show();
+
+
+            
+        } catch (IOException ex) {
+            System.getLogger(VistaMainController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+    }
+
+    @FXML
+    private void goToBalancePic(MouseEvent event) {
+        Stage cambiarVista = (Stage) balancePic.getScene().getWindow();
+
+
+        try {
+            Parent nroot = FXMLLoader.load(getClass().getResource("/view/BalanceDia.fxml"));
+            Scene scene = new Scene(nroot);
+            cambiarVista.setTitle("Vista 13");
+
+
+            // Seteo la scene y la muestro
+            cambiarVista.setScene(scene);
+
+            cambiarVista.show();
+
+
+            
+        } catch (IOException ex) {
+            System.getLogger(VistaMainController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+    }
+
+    @FXML
+    private void goToBalance(MouseEvent event) {
+        Stage cambiarVista = (Stage) balance.getScene().getWindow();
+
+
+        try {
+            Parent nroot = FXMLLoader.load(getClass().getResource("/view/BalanceDia.fxml"));
+            Scene scene = new Scene(nroot);
+            cambiarVista.setTitle("Vista 13");
+
+
+            // Seteo la scene y la muestro
+            cambiarVista.setScene(scene);
+
+            cambiarVista.show();
+
+
+            
+        } catch (IOException ex) {
+            System.getLogger(VistaMainController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+    }
+
+    @FXML
+    private void goToVerPedidosPic(MouseEvent event) {
+        Stage cambiarVista = (Stage) verPedidosPic.getScene().getWindow();
+
+
+        try {
+            Parent nroot = FXMLLoader.load(getClass().getResource("/view/VerPedidos.fxml"));
+            Scene scene = new Scene(nroot);
+            cambiarVista.setTitle("Vista 14");
+
+
+            // Seteo la scene y la muestro
+            cambiarVista.setScene(scene);
+
+            cambiarVista.show();
+
+
+            
+        } catch (IOException ex) {
+            System.getLogger(VistaMainController.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+    }
+
+    @FXML
+    private void goToVerPedidos(MouseEvent event) {
+        Stage cambiarVista = (Stage) verPedidos.getScene().getWindow();
+
+
+        try {
+            Parent nroot = FXMLLoader.load(getClass().getResource("/view/VerPedidos.fxml"));
+            Scene scene = new Scene(nroot);
+            cambiarVista.setTitle("Vista 14");
 
 
             // Seteo la scene y la muestro
